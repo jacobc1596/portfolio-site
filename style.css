@@ -95,12 +95,17 @@ span {
     text-align: center;    
 }
 
-.project img {
-    width:100%;
+.project {
+    /* border:2px solid red; */
+    display:grid;
+    grid-template-rows: auto 1fr;
 }
 
-.project {
-    border:2px solid red;
+.project img {
+    width:100%;
+    height:100%;
+    display: block;
+    object-fit: cover;
 }
 
 
