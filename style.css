@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
 *, *::before, *::after {
     box-sizing:border-box;
@@ -33,20 +34,32 @@ nav {
 }
 
 h1 {
-    font-family:'Nunito', Arial, Helvetica, sans-serif;
+    font-family:'Play', Arial, Helvetica, sans-serif;
     font-size: 5em;
     color:darkblue;
+    text-align: center;
 }
 
-h2, h3, p, li {
+h2, h3 {
+    font-family:'Play', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p, li {
     text-align:center;
     font-family:'Nunito', Arial, Helvetica, sans-serif;
     list-style: none;
     line-height: 2em;
+    font-size: 1.5em;
+    margin: 20px 15px; 
 }
 
 h2 {
     font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
 }
 
 section {
@@ -62,7 +75,15 @@ span {
     /* border:1px solid black; */
     display:grid;
     justify-items: center;
-    padding: 150px 10px;
+    padding:250px 10px;
+    position: relative;
+    height:90vh;
+}
+
+.intro img {
+    position: absolute;
+    top:25%;
+    z-index:-1;
 }
 
 .my-services {
@@ -191,6 +212,7 @@ footer {
 }
 
 @media screen and  (max-width:800px) {
+
     .my-work {
         display:block;
     }
