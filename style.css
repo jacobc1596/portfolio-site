@@ -55,7 +55,6 @@ p, li {
     list-style: none;
     line-height: 2em;
     font-size: 1.5em;
-    margin: 20px 15px; 
 }
 
 h2 {
@@ -79,9 +78,10 @@ span {
     /* border:1px solid black; */
     display:grid;
     justify-items: center;
+    align-content: center;
     padding:250px 10px;
     position: relative;
-    height:100vh;
+    height:90vh;
 }
 
 .intro img {
@@ -98,15 +98,26 @@ span {
     background-color: darkblue;
 }
 
+.my-services p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .services {
     display:grid;
     grid-template-columns: auto auto;
-    column-gap: 20px;
+    /* column-gap: 20px; */
     justify-items: center;
+    text-align: justify;
 }
 
 .service {
-    width:80%;
+    width:90%;
+}
+
+.my-services p {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .my-work {
@@ -215,8 +226,11 @@ footer {
     opacity: 0.6;
 }
 
-@media screen and  (max-width:800px) {
+@media screen and (max-width:800px) {
 
+    .intro img {
+        top:30%;
+    }
     .my-work {
         display:block;
     }
@@ -238,5 +252,30 @@ footer {
 
     h1 {
         text-align:center;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .intro img {
+        top:17%;
+    }
+}    
+
+@media screen and (max-width:600px) {
+    .intro img {
+        top:10%;
+    }
+}    
+
+@media screen and (max-height:600px) {
+    .intro img {
+        position: static; 
+        display:block;
+        /* top:80%; */
+        height:125px;
+    }
+
+    .intro {
+        padding-bottom: 300px;
     }
 }
