@@ -9,10 +9,6 @@ body {
     padding:0;
 }
 
-.avatar {
-    height:150px;
-}
-
 a {
     text-decoration: none;
     color:black;
@@ -35,9 +31,14 @@ nav {
 h1 {
     font-family:'Play', Arial, Helvetica, sans-serif;
     font-size: 5em;
-    color:darkblue;
+    color:#ffc800;
     text-align: center;
 }
+
+span {
+    color:#666564;
+}
+
 
 .title {
     display: flex;
@@ -57,7 +58,7 @@ p, li {
     font-size: 1.5em;
 }
 
-h2 {
+h2{
     font-size: 3em;
 }
 
@@ -69,18 +70,19 @@ section {
     width:100%;
 }
 
-span {
-    color:rgb(58, 197, 197);
+section:nth-child(odd){
+    background-color: #9100ff;
 }
+/* I N T R O    S E C T I O N */
 
 .intro {
     /* border:1px solid black; */
     display:grid;
     justify-items: center;
     align-content: center;
-    padding:250px 10px;
+    /* padding:250px 10px; */
     position: relative;
-    height:90vh;
+    height:100vh;
 }
 
 .intro img {
@@ -88,13 +90,18 @@ span {
     top:25%;
     z-index:-1;
 }
-/*----------------------------------*/
+
+.avatar {
+    height:150px;
+}
+
+/* M Y    S E R V I C E S */
+
 .my-services {
     /* border:1px solid black; */
     display:flex;
     flex-direction: row;
     color:white;
-    background-color: darkblue;
     justify-content: space-evenly;
     align-items: center;
     height:70vh;
@@ -106,14 +113,19 @@ span {
     /* box-shadow: 8px 8px 20px 5px rgb(5, 5, 71), 12px 12px 25px rgb(5, 5, 71); */
 }
 
-
-
 /*----------------------------------*/
 
 .my-work {
     display:grid;
-    color:darkblue;
     padding-bottom: 150px;
+}
+
+.my-work h2{
+    color:#ffc800;
+}
+
+.my-work h3{
+    color:#666564;
 }
 
 .projects {
@@ -149,7 +161,7 @@ span {
     width:100%;
     opacity:0;
     transition:0.75s ease;
-    background-color: rgb(16, 82, 83);
+    background-color:#666564 ;
 }
 
 .container:hover .overlay {
@@ -157,7 +169,7 @@ span {
 }
 
 .text {
-    color: white;
+    color: #e6be2e;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
     font-size: 3em;
     position: absolute;
@@ -167,13 +179,11 @@ span {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    opacity: 1;
-
 }
 
 .technologies {
     display: grid;
-    background-color: darkblue;
+    /* background-color: darkblue; */
     color:white;
     padding-top:15px;
     padding-bottom: 5em;
@@ -211,6 +221,31 @@ hr {
 
 ul {
     display: inline;
+}
+
+/*Contact Me Section*/
+.contact-me{
+    text-align: center;
+    padding-bottom:50px;
+    color:#ffc800;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.contact-me img {
+    height:100px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.contact-me img:hover {
+    transform:scale(1.2,1.2); 
+}
+
+.social-nav img:nth-child(1){
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 footer {
