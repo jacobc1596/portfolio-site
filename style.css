@@ -9,7 +9,7 @@ body {
     padding:0;
 }
 
-a {
+nav a {
     text-decoration: none;
     color:black;
     font-size:2em;
@@ -85,14 +85,17 @@ section:nth-child(odd){
     height:100vh;
 }
 
-.intro img {
+/* .intro img:first-of-type {
     position: absolute;
     top:25%;
     z-index:-1;
-}
+} */
 
 .avatar {
     height:150px;
+    position: absolute;
+    top:25%;
+    z-index:-1;
 }
 
 /* M Y    S E R V I C E S */
@@ -108,12 +111,15 @@ section:nth-child(odd){
 }
 
 .my-services img {
-    height:350px;
-    margin-bottom: 0px;
-    /* box-shadow: 8px 8px 20px 5px rgb(5, 5, 71), 12px 12px 25px rgb(5, 5, 71); */
+    height:400px;
+    border-radius: 50%;
 }
 
-/*----------------------------------*/
+.about-me{
+    width:450px;
+}
+
+/* P R O J E C T S */
 
 .my-work {
     display:grid;
@@ -206,7 +212,7 @@ section:nth-child(odd){
     /* border-radius: 20px; */
     padding-bottom: 1em;
     font-style: italic;
-    box-shadow: 8px 8px 20px 5px rgb(5, 5, 71), 12px 12px 25px rgb(5, 5, 71);
+    box-shadow: 8px 8px 20px 5px #530092, 12px 12px 25px #530092;
     transform:rotate(2deg);
 }
 
