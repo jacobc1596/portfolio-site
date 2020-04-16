@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     padding:0;
@@ -43,6 +47,7 @@ span {
 .title {
     display: flex;
     align-items: center;
+    transition: 0.5s;
 }
 
 h2, h3 {
@@ -70,9 +75,6 @@ section {
     width:100%;
 }
 
-section:nth-child(odd){
-    background-color: #9100ff;
-}
 /* I N T R O    S E C T I O N */
 
 .intro {
@@ -96,12 +98,59 @@ section:nth-child(odd){
     position: absolute;
     top:25%;
     z-index:-1;
+    visibility: visible;
+}
+
+.avatar-hover {
+    height:150px;
+    position: absolute;
+    top:25%;
+    visibility: hidden;
+    transition:0.5s;
+}
+
+.button {
+    position: absolute;
+    bottom:50px;
+    left:20px;
+    color:white;
+    background: red;
+    height:50px;
+    width: fit-content;
+    padding: 15px 10px;
+    text-align: center;
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    box-shadow: 8px 8px 4px #333333;
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.button:hover {
+    transform:scale(1.2,1.2);
+}
+
+/* P U R G A T O R Y */
+
+.purgatory {
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.purgatory h1, h2, h3 {
+    color:white;
 }
 
 /* M Y    S E R V I C E S */
 
 .my-services {
     /* border:1px solid black; */
+    background-color: #9100ff;
     display:flex;
     flex-direction: row;
     color:white;
@@ -189,7 +238,7 @@ section:nth-child(odd){
 
 .technologies {
     display: grid;
-    /* background-color: darkblue; */
+    background-color: #9100ff;
     color:white;
     padding-top:15px;
     padding-bottom: 5em;
