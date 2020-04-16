@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" type="image" href="images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
         <title>Jacob Collins Web Development</title>
     </head>
 
@@ -17,8 +17,8 @@
 
         <header>
             <nav>
-                <a href="#">&ltjacobcollins&gt</a>
-                <a class="float-right" href="#">&ltcontact&gt</a>
+                <a id="nav1" href="#">&lt;jacobcollins&gt;</a>
+                <a id="nav2" class="float-right" href="#">&lt;contact&gt;</a>
             </nav>
         </header>
 
@@ -26,12 +26,23 @@
         <!--introduction-->
         <section class="intro">
                 <div class="title"><h1>Front-End <span>Web Developer</span></h1></div>
-                <img class="avatar" src="images/avatar-bubble.png" alt="An avatar of Jacob">
+                <img class="avatar" src="images/avatar-bubble.png">
+                <img class="avatar-hover" src="images/avatar-bubble-hover.png">
+                <a href="#1"><div class="button" onclick="showImage();">Do NOT Click!</div></a>
         </section>
 
 
+        <!--purgatory-->
+        <div class="purgatory" id="1">
+            <h1>You just couldn't help yourself.</h1>
+            <h2>Well, we're here now.</h2>
+            <h2>Might as well carry on.</h2>
+            <h3>Scroll down to learn more about me and my projects.</h3>
+        </div>
+
+
         <!--my services-->
-        <section class="my-services" id="1">
+        <section class="my-services">
             <img src="images/portfolio-profile.png" alt="a picture of Jacob outdoors">
             <div class="about-me">
                 <h2>Hi, I'm Jacob. <br/>Nice to meet you.</h2>
