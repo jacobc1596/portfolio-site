@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
+:root{
+--main-color: #9100ff;
+--secondary-color:#ffc800;
+}
+
 *, *::before, *::after {
     box-sizing:border-box;
 }
@@ -19,7 +24,7 @@ nav a {
     font-size:2em;
 }
 
-a:hover {
+nav a:hover {
     font-style:italic;
 }
 
@@ -39,7 +44,7 @@ h1 {
     text-align: center;
 }
 
-span {
+.title-extension {
     color:#666564;
 }
 
@@ -85,13 +90,8 @@ section {
     /* padding:250px 10px; */
     position: relative;
     height:100vh;
+    overflow:hidden;
 }
-
-/* .intro img:first-of-type {
-    position: absolute;
-    top:25%;
-    z-index:-1;
-} */
 
 .avatar {
     height:150px;
@@ -109,6 +109,14 @@ section {
     transition:0.5s;
 }
 
+.avatar-funeral {
+    height:150px;
+    position: absolute;
+    top:25%;
+    visibility: hidden;
+    transition:0.5s;
+}
+
 .button {
     position: absolute;
     bottom:50px;
@@ -116,19 +124,35 @@ section {
     color:white;
     background: red;
     height:50px;
-    width: fit-content;
+    width: 50px;
     padding: 15px 10px;
     text-align: center;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 900;
-    border-radius: 10px;
+    border-radius: 50%;
     box-shadow: 8px 8px 4px #333333;
     cursor: pointer;
     transition:0.5s;
+    animation-name: button;
+    animation-duration:5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    font-size:0.6em;
+    display:flex;
+    align-items: center;
 }
 
 .button:hover {
     transform:scale(1.2,1.2);
+}
+
+@keyframes button{
+    0%{transform:scale(1,1);}
+    15%{transform:scale(1.5,1.5);}
+    30%{transform:scale(1,1);}
+    45%{transform:scale(1.5,1.5);}
+    60%{transform:scale(1,1);}
 }
 
 /* P U R G A T O R Y */
@@ -137,14 +161,40 @@ section {
     height:100vh;
     display:flex;
     flex-direction: column;
-    background: black;
+    /* background: black; */
+    background-image: radial-gradient(ellipse 80% 60% at top left, gray 5%,black 90%);
     align-items: center;
     justify-content: center;
-}
-
-.purgatory h1, h2, h3 {
+    position:relative;
     color:white;
 }
+
+.purgatory h1 {
+    color:white;
+}
+
+.purgatory span {
+    transform:rotate(45deg);
+    height:30px;
+    width:30px;
+    border-bottom:2px solid #fff;
+    border-right: 2px solid #fff;
+    display:block;
+    position: absolute;
+    bottom:50px;
+    animation-name: proceed;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes proceed {
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+
 
 /* M Y    S E R V I C E S */
 
@@ -176,11 +226,7 @@ section {
 }
 
 .my-work h2{
-    color:#ffc800;
-}
-
-.my-work h3{
-    color:#666564;
+    color: var(--main-color);
 }
 
 .projects {
@@ -208,37 +254,41 @@ section {
 
 .overlay {
     position:absolute;
-    top:0;
     bottom:0;
-    left:0;
-    right:0;
     height:100%;
     width:100%;
     opacity:0;
     transition:0.75s ease;
-    background-color:#666564 ;
+    background-color:#000 ;
 }
 
 .container:hover .overlay {
-    opacity: 0.75;
+    opacity: 0.9;
+    pointer-events: none;
 }
 
 .text {
-    color: #e6be2e;
+    color: #fff;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 3em;
+    font-size: 2em;
+    padding-left:20px;
+    padding-right:20px;
     position: absolute;
+    width:100%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    pointer-events: none;
 }
+
+/* T E C H N O L O G I E S*/
 
 .technologies {
     display: grid;
-    background-color: #9100ff;
+    background-color: var(--main-color);
     color:white;
     padding-top:15px;
     padding-bottom: 5em;
@@ -279,15 +329,18 @@ ul {
 }
 
 /*Contact Me Section*/
+
 .contact-me{
     text-align: center;
     padding-bottom:50px;
-    color:#ffc800;
+    color:black;
     margin-right: auto;
     margin-left: auto;
 }
 
-
+.contact-me h2{
+    color:var(--main-color);
+}
 .contact-me img {
     height:100px;
     display: inline-block;
