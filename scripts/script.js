@@ -9,24 +9,24 @@ $(".avatar").slideDown(3000);
 
 
 function showImage(){
+    $(".button").hide(0);
     $(".purgatory").show(0);
     $("#nav2").css({transition:"0.5s"});
     $("#nav2").css({transform:"translate(-200px, 700px) rotate(60deg)"});
     $(".avatar").css({visibility:"hidden"});
     $(".avatar-hover").css({visibility:"visible"});
-    $(".avatar-hover").css({transform:"rotate(20deg) translate(0px, 200px)"});
+    $(".avatar-hover").css({transform:"rotate(40deg) translate(0px, 110vh)"});
     $(".title").css({transform:"rotate(20deg) translate(0px, 200px)"});
+    // $(".title h1 span").css({transform:"rotate(20deg) translate(-100px, 200px)"});
     setTimeout(function(){
         hideImage();   
     },500);
 }
 
 function hideImage(){
-    $("nav a").css({transform:"translate(0px,0px)"});
-
+    $("#nav2").css({transform:"translate(0px,0px) rotate(0deg)"});
     $(".avatar-hover").css({transform:"rotate(0deg)"});
-    $(".title").css({transform:"rotate(0deg)"});
+    $(".title").css({transform:"rotate(0deg) translate(0px,0px)"});
     $(".avatar-hover").css({visibility:"hidden"});
-    $(".avatar").css({visibility:"visible"});
+    $(".avatar-funeral").css({visibility:"visible"});
 }
-
