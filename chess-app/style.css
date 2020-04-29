@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+:root{
+    --light-clr: #eee;
+    --dark-clr: #a8a8a8;
+}
+
+
+body {
+    background-color: white;
+    font-family:"Dosis", Arial, sans-serif;
+    margin:0;
+}
+
+/*General Styles*/
+h2 {
+    text-align:center;
+    font-family: "Dosis", Arial, sans-serif;
+    font-size: 2.3em;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+img {
+    height:200px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+nav {
+    text-align:left;
+    font-family: "Dosis", Arial, sans-serif;
+    font-size: 2em;
+    background-color: var(--light-clr);
+    font-weight: 900;
+}
+
+#page-container {
+    display:flex;
+    display: -webkit-flex;
+    flex-flow: column;
+    position: relative;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*START BUTTON, BOARD, & WELCOME MESSAGE*/
+
+#go{
+    background:#a8a8a8;
+    color:white;
+    font-size: 4rem;
+    padding:1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 5px 5px 20px #646464;
+}
+
+#go:hover{
+    color:#e0ac1c;
+}
+
+.content {
+    display:grid;
+    position:relative;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--light-clr);
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px 3px var(--dark-clr), 5px 5px 5px 1px var(--dark-clr);
+}
+
+#start {
+    justify-self: center;
+    align-self: center;
+}
+
+.board {
+    display:grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    font-size:20px;
+    font-family: "Dosis", Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    pointer-events: none;
+    height:fit-content;
+    border:3px solid #440000;
+    border-radius: 10px;
+    box-shadow: 7px 7px 30px #a8a8a8;
+}
+
+#a8 {
+    border-radius: 10px 0 0 0;
+}
+
+#target {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: 900;
+    color:#e0ac1c;
+    pointer-events: none;
+}
+
+.lSq {
+    width:70px;
+    height:70px;
+    background-color: #f3f3f3;
+    display: grid;
+    color:#440000;
+}
+
+.dSq {
+    width:70px;
+    height:70px;
+    background-color: #440000;
+    display: grid;
+    color:#f3f3f3;
+}
+
+.square:hover {
+    opacity: 0.3;
+    background-color:#c7a341;
+}
+
+.file {
+    text-align: right;
+    font-size: 1.2em;
+    align-self: flex-end;
+    pointer-events: none;
+}
+
+.rank {
+    pointer-events: none;
+}
+
+.score-output {
+    font-size:5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .column-1, .column-2, .column-3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+#stats {
+    /* position:relative; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.correct {
+    border:6px solid green;
+    height:130px;
+    width:130px; 
+    font-size:5em;
+    border-radius: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.incorrect {
+    border:6px solid red;
+    height:130px;
+    width:130px;
+    font-size:5em;
+    border-radius: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*S E T T I N G S   P A N E L   &   C O U N T D O W N   C L O C K*/
+
+.settings-panel {
+    background:#a8a8a8;
+    color:white;
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:560px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 20px 2px #646464;
+    border-radius: 20px;
+    /* width:80%; */
+    /* flex-grow: 1; */
+}
+
+#settings {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.custom-select {
+    text-align: center;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.custom-select select {
+    background: #f3f3f3;
+    padding:10px;
+    width:160px;
+    border:none;
+    border-radius: 8px;
+    font-size: 0.7em;
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#countdown {
+    text-align: center;
+    display: block;
+    font-size: 4em;
+    font-weight: 900;
+    visibility: hidden;
+}
+
+#difficulty{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*S W I T C H   S T Y L I N G*/
+
+/*The box around the slider*/
+.switch {
+    position:relative;
+    display:inline-block;
+    width:80px;
+    height:40px;
+}
+
+/*Hide default HTML checkbox*/
+.switch input {
+    opacity: 0;
+    width:0;
+    height:0;
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+}
+
+/*The slider inside the switch*/
+.slider {
+    position:absolute;
+    cursor: pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#eeeeee;
+    -webkit-transition:0.4s;
+    transition:0.4s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 2px #424242;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 6px;
+    background-color: #440000;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #440000;
+}
+
+input:checked + .slider::before {
+    background-color: #eeeeee;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+}
+
+/*footer styles*/
+footer {
+    background:black;
+    color:white;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:2em;
+    text-align: center;
+}
+
+/* on screens that are 600px or less, do this... */
+@media screen and (max-width:600px){
+
+    nav{
+        font-size: 1rem;
+    }
+    #go{
+        font-size: 1.5rem;
+        padding:1rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    .board{
+        grid-template-columns: repeat(8, 45px);
+        grid-template-rows: repeat(8, 45px);
+        font-size:14px;
+    }
+
+    .lSq {
+        width:45px;
+        height:45px;
+    }
+    
+    .dSq {
+        width:45px;
+        height:45px;
+    }
+
+    .settings-panel{
+        width:360px;
+    }
+
+    #countdown {
+        font-size: 3em;
+    }
+
+    #target{
+        font-size:70px;
+    }
+
+    .correct, .incorrect{
+        height:70px;
+        width:70px;
+    }
+
+    .custom-select select {
+
+        padding:7px;
+        width:100px;
+        border:none;
+        border-radius: 8px;
+
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+        cursor: pointer;
+    }
+
+    #difficulty{
+        font-size: 1em;
+    }
+
+    .switch {
+        position:relative;
+        display:inline-block;
+        width:60px;
+        height:30px;
+    }
+
+    .slider::before {
+        height: 20px;
+        width: 20px;
+        left:10px;
+        bottom:5px;
+    }
+
+    input:checked + .slider::before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+
+    #settings{
+        font-size:1em;
+    }
+
+    .score-output{
+        font-size: 2em;
+        margin:1rem;
+    }
+
+}
+
+/* on screens that are 1000px or less, do this... */
+@media screen and (max-width:1000px) {
+    h2, p {
+        display:none;
+    }
+    #go{
+        font-size:2rem;
+    }
+
+    .board {
+        align-content: center;
+        justify-content: center;
+        border: 0px;
+    }
+
+    #stats {
+        line-height: 1.6;
+    }
+    
+    #start {
+        padding-bottom:20px;
+        text-align: center;
+    }
+
+    #settings {
+        text-align: center;
+    }
+
+    .correct {
+        margin-top: 0.5em;
+    }
+    
+    .incorrect {
+        margin-top: 0.5em;
+    }
+
+}
+
+@media screen and (max-width:1250px){
+    #go{
+        margin: 1rem;
+    }
+    .content {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .content {
+        width: 1400px;
+    }
+}

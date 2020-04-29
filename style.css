@@ -222,12 +222,14 @@ section {
 .projects {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;    
+    text-align: center;   
+    gap:1rem; 
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 .project {
-    display:grid;
-    grid-template-rows: auto 1fr;
+    display:grid;;
 }
 
 .project img {
