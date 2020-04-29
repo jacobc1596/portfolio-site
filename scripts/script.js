@@ -7,28 +7,11 @@ $(".avatar").slideDown(3000);
 $("h1").slideDown(3000);
 $(".avatar").slideDown(3000);
 
-
-// function showImage(){
-//     $(".button").hide(0);
-//     $(".purgatory").show(500);
-//     $(".avatar").css({visibility:"hidden"});
-//     $(".avatar-hover").css({visibility:"visible"});
-//     $(".avatar-hover").css({transform:"translate(0px, 110vh)"});
-//     setTimeout(function(){
-//         hideImage();   
-//     },1000);
-// }
-
-// function hideImage(){
-//     $(".avatar-hover").css({visibility:"hidden"});
-//     $(".avatar-funeral").css({visibility:"visible"});
-    
-// }
-
  $(".button").click(function(){
     $(".button").hide(0);
+    var avatarHover = "<img class='avatar-hover' src='images/avatar-bubble-hover.png'>"
+    $(".intro").append(avatarHover);
     $(".avatar").css({visibility:"hidden"});
-    $(".avatar-hover").css({visibility:"visible"});
     $(".purgatory").show(500);
     $(".avatar-hover").animate({
         top:'110vh'
@@ -42,5 +25,6 @@ $(".avatar").slideDown(3000);
 
  function hideImage(){
     $(".avatar-hover").css({visibility:"hidden"});
-    $(".avatar-funeral").css({visibility:"visible"});
+    var avatarFuneral = "<img class='avatar-hover' src='images/avatar-funeral.png'>"
+    $(".intro").append(avatarFuneral);
  }
