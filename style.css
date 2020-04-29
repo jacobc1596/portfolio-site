@@ -26,7 +26,7 @@ nav {
 nav a {
     text-decoration: none;
     color:black;
-    font-size:2em;
+    font-size:1.75rem;
 }
 
 #nav2:hover {
@@ -40,7 +40,7 @@ nav a {
 
 h1 {
     font-family:'Play', Arial, Helvetica, sans-serif;
-    font-size: 5em;
+    font-size: 5rem;
     color:#ffc800;
     text-align: center;
 }
@@ -55,15 +55,15 @@ p, li {
     font-family:'Roboto', Arial, Helvetica, sans-serif;
     list-style: none;
     line-height: 2em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 h2{
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 section {
@@ -73,6 +73,7 @@ section {
 /* I N T R O    S E C T I O N */
 
 .title {
+    order:2;
     display: flex;
     align-items: center;
     transition: 0.5s;
@@ -83,20 +84,18 @@ section {
 }
 
 .intro {
-    /* border:1px solid black; */
-    display:grid;
-    justify-items: center;
-    align-content: center;
-    /* padding:250px 10px; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    height:100vh;
+    min-height:100vh;
     overflow:hidden;
 }
 
 .avatar {
+    order:1;
     height:150px;
-    position: absolute;
-    top:25%;
     z-index:-1;
     visibility: visible;
 }
@@ -105,7 +104,6 @@ section {
     height:150px;
     position: absolute;
     top:25%;
-    visibility: hidden;
     transition:0.5s;
 }
 
@@ -113,7 +111,6 @@ section {
     height:150px;
     position: absolute;
     top:25%;
-    visibility: hidden;
     transition:0.5s;
 }
 
@@ -138,14 +135,11 @@ section {
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-delay: 1.5s;
-    font-size:0.6em;
+    font-size:0.6rem;
     display:flex;
     align-items: center;
 }
 
-.button:hover {
-    transform:scale(1.2,1.2);
-}
 
 @keyframes button{
     0%{transform:scale(1,1);}
@@ -158,16 +152,16 @@ section {
 /* P U R G A T O R Y */
 
 .purgatory {
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction: column;
-    /* background: black; */
     background-image: linear-gradient(gray,black 50%);
     align-items: center;
     justify-content: center;
-    position:relative;
+    position: static;
     color:white;
-    line-height: 5vh;
+    line-height: 6rem;
+    padding-bottom:2rem
 }
 
 .purgatory h1 {
@@ -181,10 +175,8 @@ section {
     border-bottom:2px solid #fff;
     border-right: 2px solid #fff;
     display:block;
-    position: absolute;
-    bottom:50px;
     animation-name: proceed;
-    animation-duration: 0.75s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -208,7 +200,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     height:fit-content;
-    padding:50px;
+    padding:5rem;
 }
 
 .my-services img {
@@ -216,15 +208,11 @@ section {
     border-radius: 50%;
 }
 
-.about-me{
-    width:450px;
-}
-
 /* P R O J E C T S */
 
 .my-work {
     display:grid;
-    padding-bottom: 150px;
+    padding-bottom: 8rem;
 }
 
 .my-work h2{
@@ -238,7 +226,6 @@ section {
 }
 
 .project {
-    /* border:2px solid red; */
     display:grid;
     grid-template-rows: auto 1fr;
 }
@@ -272,9 +259,9 @@ section {
 .text {
     color: #fff;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    padding-left:20px;
-    padding-right:20px;
+    font-size: 2rem;
+    padding-left:1.25em;
+    padding-right:1.25em;
     position: absolute;
     width:100%;
     top: 50%;
@@ -292,8 +279,8 @@ section {
     display: grid;
     background-color: var(--main-color);
     color:white;
-    padding-top:15px;
-    padding-bottom: 5em;
+    padding-top:1rem;
+    padding-bottom: 3rem;
 }
 
 .content {
@@ -302,50 +289,19 @@ section {
 }
 
 .content p {
-    line-height: 1em;
+    line-height: 1.25rem;
 }
 
 .content strong {
-    font-size:1.2em;
-}
-
-.technology-list {
-    display: inline-block;
-    background-color: rgb(240, 240, 93);
-    color:black;
-    width:35%;
-    justify-self: center;
-    margin-left:30px;
-    margin-right:30px;
-    margin-top: 40px;
-    /* border-radius: 20px; */
-    padding-bottom: 1em;
-    font-style: italic;
-    box-shadow: 8px 8px 20px 5px #530092, 12px 12px 25px #530092;
-    transform:rotate(2deg);
-}
-
-hr {
-    border:1px solid black;
-    opacity:0.2;
-}
-
-.technology-list li {
-    line-height: 3em;
-}
-
-ul {
-    display: inline;
+    font-size:2rem;
 }
 
 /*Contact Me Section*/
 
 .contact-me{
     text-align: center;
-    padding-bottom:50px;
+    padding-bottom:4rem;
     color:black;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .contact-me h2{
@@ -354,7 +310,7 @@ ul {
 .contact-me img {
     height:100px;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 .contact-me img:hover {
@@ -362,18 +318,16 @@ ul {
 }
 
 .social-nav{
-    padding-top:20px;
+    padding-top:1.25em;
 }
 
 .social-nav img:nth-child(1){
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 1.25em;
 }
 
 footer {
     background-color: rgb(32, 32, 32);
-    padding-top:10px;
-    padding-bottom:10px;
+    padding:0.75rem 0;
     text-align: center;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -383,28 +337,30 @@ footer {
     opacity: 0.6;
 }
 
+.purgatory-container{
+    height:70%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (max-width:1000px) {
 
-    .intro{
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items:center;
-        padding-bottom: 30px;
-    }
-
-    .avatar{
-        position:static;
-        height:150px;
-        width:150px;
-    }
-
-    .avatar-funeral, .avatar-hover, .button {
+    .button {
         visibility: hidden;
     }
 
+    .about-me{
+        width:100%;
+    }
+
     .text{
-        font-size:1.5em;
+        font-size:1.2rem;
+    }
+
+    .my-services{
+        padding:2rem;
     }
 
     .my-services img{
@@ -418,14 +374,19 @@ footer {
 }
 
 @media screen and (max-width:800px){
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
     .text{
-        font-size:1.2em;
+        font-size:1rem;
     }
 
     .my-services{
         flex-direction: column;
         height: fit-content;
-        padding-bottom: 50px;
+        padding-bottom: 3.2rem;
     }
 
     .my-services img{
@@ -438,20 +399,16 @@ footer {
     }
 
     .text{
-        font-size:2em;
-    }
-
-    .technologies, .contact-me{
-        font-size: 0.9em;
+        font-size:2rem;
     }
 
     .content, .contact-me{
-        padding-left:25px;
-        padding-right:25px;
+        padding-left:1.75rem;
+        padding-right:1.75rem;
     }
 
     .content strong{
-        font-size:1.05em;
+        font-size:1.75rem;
     }
 
     .contact-me{
@@ -463,11 +420,11 @@ footer {
 
     .social-nav{
         display:grid;
-        grid-template-columns: 100px 100px;
+        grid-template-columns: 6.5rem 6.5rem;
         align-items: center;
         justify-items: center;
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
     }
 
 
