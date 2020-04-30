@@ -54,7 +54,7 @@ p, li {
     text-align:center;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
     list-style: none;
-    line-height: 2em;
+    /* line-height: 2em; */
     font-size: 1.5rem;
 }
 
@@ -268,7 +268,7 @@ section {
 .text {
     color: #fff;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left:1.25em;
     padding-right:1.25em;
     position: absolute;
@@ -297,13 +297,18 @@ section {
     text-align: center;
 }
 
-.content p {
-    line-height: 1.25rem;
+.content li {
+    line-height:3rem;
 }
 
-.content strong {
-    font-size:2rem;
+.fas, .far {
+    color:rgb(119, 255, 119);
+    background-color: var(--main-color);
 }
+
+/* .content p {
+    line-height: 1.5rem;
+} */
 
 /*Contact Me Section*/
 
