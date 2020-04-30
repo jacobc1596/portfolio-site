@@ -31,3 +31,8 @@ $(".avatar").slideDown(3000);
     $(".avatar-funeral").css({visibility:"visible"});
 
  }
+
+ $(".next").click(function(){
+    $('html, body').animate({
+        scrollTop: $("#about-me").offset().top}, 200);
+ })

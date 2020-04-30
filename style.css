@@ -175,7 +175,7 @@ section {
     color:white;
 }
 
-.purgatory span {
+.purgatory .next {
     transform:rotate(45deg);
     height:30px;
     width:30px;
@@ -186,6 +186,7 @@ section {
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 @keyframes proceed {
