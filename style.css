@@ -63,7 +63,7 @@ h2{
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 section {
@@ -301,7 +301,7 @@ section {
     line-height:3rem;
 }
 
-.fas, .far {
+.fa-spinner, .fa-check-circle {
     color:rgb(119, 255, 119);
     background-color: var(--main-color);
 }
@@ -334,13 +334,29 @@ section {
 .contact-me h2{
     color:var(--main-color);
 }
-.contact-me img {
-    height:100px;
+.fa-github, .fa-envelope, 
+.fa-linkedin-in, .fa-codepen,
+.fa-twitter {
+    font-size:6rem;
     display: inline-block;
     transition: 0.5s ease;
+    color:black;
+    padding: 0 1.25rem;
 }
 
-.contact-me img:hover {
+.fa-linkedin-in{
+    color:rgb(0, 102, 255);
+}
+
+.fa-twitter{
+    color:rgb(0, 153, 255);
+}
+
+.fa-envelope{
+    color:var(--secondary-color);
+}
+
+.social-nav i:hover {
     transform:scale(1.2,1.2); 
 }
 
@@ -348,9 +364,6 @@ section {
     padding-top:1.25em;
 }
 
-.social-nav img:nth-child(1){
-    padding: 0 1.25em;
-}
 
 footer {
     background-color: rgb(32, 32, 32);
