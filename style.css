@@ -93,24 +93,31 @@ section {
     overflow:hidden;
 }
 
-.avatar {
+.avatar-images{
+    position: relative;
     order:1;
+}
+
+.avatar-images img {
+    position:absolute;
+    top:50;
+    left:50;
+    transform: translate(-50%,-50%);
     height:150px;
-    z-index:-1;
-    visibility: visible;
+}
+
+.avatar {
+    visibility:visible;
+    z-index:2;
 }
 
 .avatar-hover {
-    height:150px;
-    position: absolute;
-    top:25%;
+    visibility: hidden;
     transition:0.5s;
 }
 
 .avatar-funeral {
-    height:150px;
-    position: absolute;
-    top:25%;
+    visibility: hidden;
     transition:0.5s;
 }
 
