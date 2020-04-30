@@ -395,6 +395,19 @@ footer {
         visibility: hidden;
     }
 
+    .title h1{
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .avatar-images img {
+        position: static;
+        transform:translate(0%,0%);
+    }
+
+    .avatar-hover, .avatar-funeral{
+        display:none;
+    }
+
     .about-me{
         width:100%;
     }
