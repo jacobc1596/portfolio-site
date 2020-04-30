@@ -305,6 +305,8 @@ section {
 
 .content ul {
     list-style-type: none;
+    text-align: center;
+    padding:0;
 }
 .content li {
     line-height:3rem;
