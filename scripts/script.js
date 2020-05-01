@@ -12,7 +12,7 @@ $(".avatar").slideDown(3000);
     // var avatarHover = "<img class='avatar-hover' src='images/avatar-bubble-hover.png'>"
     // $(".intro").append(avatarHover);
     $(".avatar").css({visibility:"hidden"});
-    $(".avatar-hover").css({visibility:"visible"});
+    $(".avatar-hover").css({display:"block"});
     $(".purgatory").show(500);
     $(".avatar-hover").animate({
         top:'110vh'
@@ -25,10 +25,10 @@ $(".avatar").slideDown(3000);
  });
 
  function hideImage(){
-    $(".avatar-hover").css({visibility:"hidden"});
+    $(".avatar-hover").css({display:"none"});
     // var avatarFuneral = "<img class='avatar-hover' src='images/avatar-funeral.png'>"
     // $(".intro").append(avatarFuneral);
-    $(".avatar-funeral").css({visibility:"visible"});
+    $(".avatar-funeral").css({display:"block"});
 
  }
 

@@ -112,12 +112,14 @@ section {
 }
 
 .avatar-hover {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display:none;
     transition:0.5s;
 }
 
 .avatar-funeral {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display:none;
     transition:0.5s;
 }
 
